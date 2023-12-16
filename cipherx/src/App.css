@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.navbar {
+  background-color: #28a745;
+  padding: 10px 15px;
+}
+
+.navbar-brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.navbar-brand img {
+  margin-right: 5px;
+}
+
+/* .form-group {
+  margin: 0px 180px;
+} */
+
+#output {
+  background-color: #e9ecef;
+}
