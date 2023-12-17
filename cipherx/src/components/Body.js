@@ -51,7 +51,7 @@ export default function Body(props) {
     }
 
     return (
-        <div className={`container text-${props.mode === 'light'?'dark':'light'}`}>
+        <div className={`container text-${props.mode === 'dark'?'light':'dark'}`}>
             <h1 className='text-center mt-3'>Caesar Cipher🔐</h1>
             <div className="form-group mb-3">
                 <textarea className="form-control" value={inputtext} onChange={handletextchange} id="input" rows="5" cols="30" placeholder='Input Text...'></textarea>
