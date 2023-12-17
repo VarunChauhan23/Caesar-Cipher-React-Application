@@ -6,25 +6,17 @@
 }
 
 .navbar {
-  background-color: #28a745;
-  padding: 10px 15px;
-}
-
-.navbar-brand {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 400;
+  padding: 10px 1px;
 }
 
 .navbar-brand img {
   margin-right: 5px;
 }
 
-/* .form-group {
-  margin: 0px 180px;
-} */
-
 #output {
-  background-color: #e9ecef;
+  background-color: #d1d9e0;
+}
+
+#flexSwitchCheckDefault {
+  cursor: pointer;
 }

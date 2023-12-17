@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Body() {
+export default function Body(props) {
     const [inputtext, setinputtext] = useState("");
     const [outputtext, setoutputtext] = useState("");
     const [shift, setshift] = useState(0);
@@ -51,7 +51,7 @@ export default function Body() {
     }
 
     return (
-        <div className="container">
+        <div className={`container text-${props.mode === 'light'?'dark':'light'}`}>
             <h1 className='text-center mt-3'>Caesar Cipher🔐</h1>
             <div className="form-group mb-3">
                 <textarea className="form-control" value={inputtext} onChange={handletextchange} id="input" rows="5" cols="30" placeholder='Input Text...'></textarea>

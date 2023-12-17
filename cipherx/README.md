@@ -1,6 +1,10 @@
 # Caesar Cipher React App
 
 A React application that allows users to perform Caesar Cipher encryption and decryption.
+Author - Varun Chauhan
+
+* This app is still under development.
+
 
 ## Table of Contents
 
@@ -17,6 +21,7 @@ A React application that allows users to perform Caesar Cipher encryption and de
 - **Decryption:** Decrypt ciphertext using the Caesar Cipher algorithm.
 - **Shift Value:** Allow users to specify the shift value for encryption or decryption.
 - **Copy to Clipboard:** Copy the encrypted or decrypted text to the clipboard.
+- **Enable Dark Mode:** Allow users to toggle between dark  and light mode.
 
 ## Installation
 
