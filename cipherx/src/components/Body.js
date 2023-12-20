@@ -14,17 +14,17 @@ export default function Body(props) {
     }
 
     function encryption() {
-        let result = settextshift(inputtext, shift);
-        setoutputtext(result);
-        console.log(result);
-    }
-
-    function decryption() {
         let result = settextshift(inputtext, -shift);
         setoutputtext(result);
-        console.log(result);
+        props.showalert("Text has been encrypted", "success");
     }
-
+    
+    function decryption() {
+        let result = settextshift(inputtext, shift);
+        setoutputtext(result);
+        props.showalert("Text has been decrypted", "success");
+    }
+    
     function settextshift(inputtext, shift) {
         let result = '';
         for (let i = 0; i < inputtext.length; i++) {
@@ -32,7 +32,7 @@ export default function Body(props) {
             if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
                 const isUpperCase = charCode >= 65 && charCode <= 90;
                 const shiftedCharCode =
-                    ((charCode - (isUpperCase ? 65 : 97) - shift + 26) % 26 + 26) % 26 + (isUpperCase ? 65 : 97);
+                ((charCode - (isUpperCase ? 65 : 97) - shift + 26) % 26 + 26) % 26 + (isUpperCase ? 65 : 97);
                 result += String.fromCharCode(shiftedCharCode);
             } else {
                 result += inputtext.charAt(i);
@@ -40,7 +40,7 @@ export default function Body(props) {
         }
         return result;
     }
-
+    
     function handleapplybtn() {
         setinputtext(outputtext);
     }
@@ -48,6 +48,7 @@ export default function Body(props) {
     function handlecopybtn() {
         document.getElementById('output');
         document.execCommand('copy');
+        props.showalert("Text copied to clipboard", "success");
     }
 
     return (
@@ -70,7 +71,7 @@ export default function Body(props) {
             </div>
             <div className="form-group mb-3">
                 <button type="button" id='copy-btn' className="btn btn-primary m-1" onClick={handlecopybtn}>Copy📋</button>
-                <button type="button" id='apply-btn' class="btn btn-secondary m-1" onClick={handleapplybtn}>Apply</button>
+                <button type="button" id='apply-btn' className="btn btn-secondary m-1" onClick={handleapplybtn}>Apply</button>
             </div>
         </div>
     );

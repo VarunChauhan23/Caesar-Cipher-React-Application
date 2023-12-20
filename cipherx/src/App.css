@@ -20,3 +20,7 @@
 #flexSwitchCheckDefault {
   cursor: pointer;
 }
+
+.alert {
+  border: none;
+}
