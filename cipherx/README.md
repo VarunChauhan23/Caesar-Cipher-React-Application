@@ -3,9 +3,6 @@
 A React application that allows users to perform Caesar Cipher encryption and decryption.
 Author - Varun Chauhan
 
-* This app is still under development.
-
-
 ## Table of Contents
 
 - [Caesar Cipher React App](#caesar-cipher-react-app)
